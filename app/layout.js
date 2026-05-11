@@ -25,20 +25,65 @@ export const metadata = {
     "Frontend Developer",
     "React Developer",
     "Next.js Portfolio",
+    "MERN Stack Developer",
+    "Full Stack Web Developer",
+    "MERN Stack Developer",
+    "React Developer",
+    "Node.js Developer",
+    "MongoDB Developer",
+    "Express.js Developer",
+    "JavaScript Developer",
+    "Next.js Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "MERN Stack Developer",
+    "Full Stack Web Developer",
+    "React Developer",
+    "Node.js Developer",
+    "MongoDB Developer",
+    "Express.js Developer",
+    "JavaScript Developer",
+    "Next.js Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "MERN Stack Developer",
+    "Full Stack Web Developer",
+    "React Developer",
+    "Node.js Developer",
+    "MongoDB Developer",
+    "Express.js Developer",
+    "JavaScript Developer",
+    "Next.js Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Pashto DevZone",
+    "Pashto Developer",
+    "Pashto Web Developer",
+    "Pashto Coding Tutorials",
+    "Pashto Programming",
+    "MERN stack developer portfolio",
+    "Hire React and Node.js developer",
+    "Full stack web development services",
+    "Professional MERN stack projects",
+    "Modern responsive websites with React",
+    "Custom admin dashboard development",
+    "MongoDB Express React Node expert",
+    "Website developer for startups",
+    "SEO optimized React websites",
   ],
 
   authors: [{ name: "Yaseen Arman" }],
   creator: "Yaseen Arman",
 
   openGraph: {
-    title: "Pashto DevZone",
+    title: "Pashto DevZone | MERN Stack Developer Portfolio",
     description:
-      "Explore modern web apps, UI designs, and development projects built with React, Next.js, and MERN stack.",
-    url: "https://pashtodevzone.com",
+      "Professional MERN Stack Developer building modern, responsive, and scalable web applications using React, Next.js, Node.js, Express, and MongoDB.",
+    url: "https://pashto-devzone.vercel.app",
     siteName: "Pashto DevZone",
     images: [
       {
-        url: "/og_img.png", 
+        url: "/og_img.png",
         width: 1200,
         height: 630,
         alt: "Pashto DevZone Portfolio",
@@ -70,8 +115,8 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />
-        <Footer className="mb-8"/>
-        </body>
+        <Footer className="mb-8" />
+      </body>
     </html>
   );
 }
