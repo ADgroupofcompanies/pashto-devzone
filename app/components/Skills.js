@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Skills = () => {
   return (
@@ -27,6 +28,7 @@ const Skills = () => {
               CSS, JavaScript, React.js, and Redux, focusing on clean code and
               smooth, responsive user experiences.
             </p>
+            <Link href="/works">
             <button className="relative inline-flex items-center overflow-hidden cursor-pointer rounded-full px-4 py-4 font-bold group">
               <span className="absolute left-0 top-0 h-full w-14 bg-red-300 transition-all duration-300 group-hover:w-full group-hover:bg-red-500 rounded-full"></span>
 
@@ -34,7 +36,7 @@ const Skills = () => {
                 <span className="mr-1">SEE</span>
                 <span>MY WORKS</span>
               </span>
-            </button>
+            </button></Link>
           </div>
           <div className="image w-[80%]">
             <Image
