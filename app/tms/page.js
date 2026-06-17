@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import {
   FaLinkedin,
@@ -7,6 +8,9 @@ import {
   FaTiktok,
   FaWhatsapp,
   FaYoutube,
+  FaShieldAlt,
+  FaDatabase,
+  FaCalendarAlt,
 } from "react-icons/fa";
 import Work from "../components/Work";
 import { motion } from "framer-motion";
@@ -68,84 +72,167 @@ const page = () => {
             transition={{ duration: 0.6 }}
             className="w-[98%] md:w-[85%] felx items-center justify-center"
           >
+            <div className="w-full max-w-5xl mx-auto px-3 md:px-6 py-6">
+              <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+                {/* Main Download Section */}
+                <div className="flex flex-col md:flex-row justify-between gap-6 p-6">
+                  {/* Left Side */}
+                  <div className="flex gap-4">
+                    <div className="flex-shrink-0">
+                      <Image
+                        src="/tms-logo.ico"
+                        alt="Tailor Management System"
+                        width={100}
+                        height={100}
+                        className="rounded-2xl border border-gray-200"
+                      />
+                    </div>
 
+                    <div>
+                      <h1 className="text-3xl font-bold text-gray-900">
+                        Tailor Management System
+                      </h1>
 
+                      <p className="text-gray-500 mt-1">By Pashto DevZone</p>
 
+                      <p className="text-sm text-gray-500 mt-3">
+                        Version 1.1.0
+                      </p>
 
-           <div className="w-full max-w-2xl mx-auto bg-white text-gray-950 p-8 rounded-3xl shadow-2xl border border-gray-200 relative overflow-hidden">
+                      <p className="text-sm text-gray-600 mt-2">
+                        Professional desktop software for tailoring shops,
+                        boutiques, garment stores, and custom clothing
+                        businesses.
+                      </p>
+                    </div>
+                  </div>
 
-  {/* Decorative Glow */}
-  <div className="absolute -top-20 -right-20 w-40 h-40 bg-green-100 rounded-full blur-3xl opacity-60"></div>
+                  {/* Right Side */}
+                  <div className="flex flex-col items-center justify-center">
+                    <button
+                      onClick={() => {
+                        const code = prompt("Enter License Code");
 
-  {/* Header */}
-  <div className="flex items-center gap-4 mb-6">
-    <div className="w-14 h-14 bg-gray-100 rounded-2xl flex items-center justify-center text-2xl">
-      🧵
-    </div>
-    <div>
-      <h2 className="text-2xl font-bold">Tailor Management System</h2>
-      <p className="text-sm text-gray-600">Professional Business Desktop Solution</p>
-    </div>
-  </div>
+                        if (code === "tms.armazenith") {
+                          const link = document.createElement("a");
+                          link.href =
+                            "/downloads/Tailor_Management_System_1.1.0.exe";
+                          link.download = "Tailor_Management_System_1.1.0.exe";
+                          document.body.appendChild(link);
+                          link.click();
+                          document.body.removeChild(link);
+                        } else {
+                          alert(
+                            "Invalid License Code. Contact WhatsApp to get access.",
+                          );
+                        }
+                      }}
+                      className="bg-green-500 hover:bg-green-600 text-white font-semibold px-10 py-4 rounded-lg text-lg shadow-md transition cursor-pointer"
+                    >
+                      Download Application (82.06 MB)
+                    </button>
 
-  {/* Description */}
-  <p className="text-sm text-gray-700 leading-relaxed mb-5">
-    A complete management solution for tailoring businesses including customer records,
-    billing, measurements, and order tracking. Designed for small to medium tailor shops
-    to go digital and grow faster.
-  </p>
+                    <a
+                      href="https://wa.me/923195341283"
+                      target="_blank"
+                      className="text-blue-600 text-sm mt-3 hover:underline"
+                    >
+                      Need License Code? Contact WhatsApp
+                    </a>
+                  </div>
+                </div>
 
-  {/* Promo */}
-  <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl mb-6">
-    <p className="text-sm font-semibold mb-1">
-      🚀 Need a system like this for your business?
-    </p>
-    <p className="text-xs text-gray-600">
-      Custom software, websites, and automation tools available on request.
-    </p>
-  </div>
+                {/* Features Row */}
+                <div className="grid grid-cols-1 md:grid-cols-3 border-t border-gray-200">
+                  <div className="flex items-center justify-center gap-3 py-5">
+                    <FaCalendarAlt className="text-green-600 text-xl" />
+                    <div>
+                      <p className="font-semibold">Last Updated</p>
+                      <p className="text-sm text-gray-500">
+                        {new Date().toLocaleDateString()}
+                      </p>
+                    </div>
+                  </div>
 
-  {/* Download Button */}
-  <button
-    onClick={() => {
-      const code = prompt("Enter License Code");
-      const correctCode = "tms.armazenith";
+                  <div className="flex items-center justify-center gap-3 py-5 border-y md:border-y-0 md:border-x border-gray-200">
+                    <FaShieldAlt className="text-green-600 text-xl" />
+                    <div>
+                      <p className="font-semibold">Security</p>
+                      <p className="text-sm text-gray-500">
+                        Verified & Protected
+                      </p>
+                    </div>
+                  </div>
 
-      if (code === correctCode) {
-        const link = document.createElement("a");
-        link.href = "/downloads/Tailor_Management_System_1.1.0.exe";
-        link.download = "Tailor_Management_System_1.1.0.exe";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } else {
-        alert("Invalid License Code. Contact WhatsApp to get access.");
-      }
-    }}
-    className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition shadow-md"
-  >
-    ⬇ Download Application
-  </button>
+                  <div className="flex items-center justify-center gap-3 py-5">
+                    <FaDatabase className="text-green-600 text-xl" />
+                    <div>
+                      <p className="font-semibold">Offline Support</p>
+                      <p className="text-sm text-gray-500">
+                        Works Without Internet
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-  {/* WhatsApp */}
-  <a
-    href="https://wa.me/923195341283"
-    target="_blank"
-    className="block text-center mt-4 text-sm text-gray-600 hover:text-gray-900"
-  >
-    Need License Code? Contact on WhatsApp
-  </a>
+              {/* Description Section */}
+              <div className="mt-8 bg-white rounded-2xl border border-gray-200 shadow-lg p-6">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  About Tailor Management System
+                </h2>
 
-  {/* Footer */}
-  <div className="mt-5 text-xs text-gray-500 text-center">
-    pashto-devzone.vercel.app/tms
-  </div>
+                <p className="text-gray-600 leading-8">
+                  Tailor Management System is a complete desktop solution
+                  designed for tailoring businesses. It helps manage customers,
+                  measurements, orders, delivery dates, and business records in
+                  a professional and organized way. The system is built for
+                  speed, simplicity, and offline usage, making it suitable for
+                  both small and large tailoring shops.
+                </p>
 
-</div>
+                <div className="mt-6">
+                  <h3 className="font-bold text-xl mb-3">Main Features</h3>
 
+                  <ul className="space-y-2 text-gray-600">
+                    <li>✓ Customer Management</li>
+                    <li>✓ Measurement Management</li>
+                    <li>✓ Order Tracking System</li>
+                    <li>✓ Delivery Date Tracking</li>
+                    <li>✓ Dashboard Analytics</li>
+                    <li>✓ Search & Filter Records</li>
+                    <li>✓ Offline Data Storage</li>
+                    <li>✓ Fast and Lightweight Desktop Software</li>
+                  </ul>
+                </div>
 
+                <div className="mt-8">
+                  <h3 className="font-bold text-xl mb-3">Available Pages</h3>
 
+                  <div className="grid md:grid-cols-2 gap-3 text-gray-600">
+                    <div>• Dashboard</div>
+                    <div>• Add Customer</div>
+                    <div>• Customer Records</div>
+                    <div>• Order Management</div>
+                    <div>• Measurements</div>
+                    <div>• Search Orders</div>
+                    <div>• Delivery Tracking</div>
+                    <div>• Business Analytics</div>
+                  </div>
+                </div>
 
+                <div className="mt-8 p-5 rounded-xl bg-gray-50 border border-gray-200">
+                  <h3 className="font-bold mb-2">Need Custom Software?</h3>
+
+                  <p className="text-gray-600">
+                    I develop custom business software, automation tools,
+                    management systems, websites, and AI-powered solutions
+                    tailored to your business requirements. Contact me to
+                    discuss your project.
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
         <End />
