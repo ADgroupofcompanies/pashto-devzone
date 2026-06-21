@@ -96,7 +96,7 @@ const page = () => {
                       <p className="text-gray-500 mt-1">By Pashto DevZone</p>
 
                       <p className="text-sm text-gray-500 mt-3">
-                        Version 1.1.0
+                        Version 1.2.0
                       </p>
 
                       <p className="text-sm text-gray-600 mt-2">
@@ -116,8 +116,8 @@ const page = () => {
                         if (code === "tms.armazenith") {
                           const link = document.createElement("a");
                           link.href =
-                            "/downloads/Tailor_Management_System_1.1.0.exe";
-                          link.download = "Tailor_Management_System_1.1.0.exe";
+                            "/downloads/Tailor_Management_System_1.2.0.exe";
+                          link.download = "Tailor_Management_System_1.2.0.exe";
                           document.body.appendChild(link);
                           link.click();
                           document.body.removeChild(link);
