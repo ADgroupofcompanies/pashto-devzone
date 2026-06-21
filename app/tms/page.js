@@ -78,7 +78,7 @@ const page = () => {
                 <div className="flex flex-col md:flex-row justify-between gap-6 p-6">
                   {/* Left Side */}
                   <div className="flex gap-4">
-                    <div className="flex-shrink-0">
+                    <div className="shrink-0">
                       <Image
                         src="/tms-logo.ico"
                         alt="Tailor Management System"
@@ -114,13 +114,10 @@ const page = () => {
                         const code = prompt("Enter License Code");
 
                         if (code === "tms.armazenith") {
-                          const link = document.createElement("a");
-                          link.href =
-                            "/downloads/Tailor_Management_System_1.2.0.exe";
-                          link.download = "Tailor_Management_System_1.2.0.exe";
-                          document.body.appendChild(link);
-                          link.click();
-                          document.body.removeChild(link);
+                          window.open(
+                            "https://github.com/ADgroupofcompanies/pashto-devzone/releases/download/v1.2.0/Tailor_Management_System_Setup_1.2.0.exe",
+                            "_blank",
+                          );
                         } else {
                           alert(
                             "Invalid License Code. Contact WhatsApp to get access.",
